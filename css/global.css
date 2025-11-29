@@ -1,30 +1,10 @@
 .login-button {
-    background-color: rgb(90, 202, 38);
     color: white;
-    font-size: 14px;
-    padding: 8px 15px;
-    border-radius: 30px;
     text-decoration: none;
-    transition: 0.3s background-color;
 }
 
 .login-button:hover {
-    background-color: rgb(202, 38, 38);
-}
-
-.navbar{
-    height: 4rem;
-}
-
-.navbar-brand{
-    font-weight: 500;
-    font-size: 24px;
-    color: rgb(90, 202, 38);
-    transition: 0.3s background-color;
-}
-
-.navbar-brand:hover{
-    color: rgb(202, 38, 38);
+    color: var(--bs-secondary);
 }
 
 .navbar-toggler {
@@ -38,15 +18,26 @@
 }
 
 .nav-link {
-    color: #666777;
+    color: white;
     font-weight: 500;
     position: relative;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #000;
+    color: var(--bs-secondary);
     font-weight: 600;
 }
+
+.offcanvas {
+    background-color: rgba(var(--bs-dark-rgb), 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  .offcanvas-backdrop.show {
+    background-color: rgba(var(--bs-dark-rgb), 0.3); /* darker or lighter overlay */
+    opacity: 1;                           /* ensure your color’s alpha is used */
+  }
+  
 
 @media (min-width: 991px) {
     .nav-link::before {
@@ -57,7 +48,7 @@
         transform: translateX(-50%);
         width: 0;
         height: 2px;
-        background-color: rgb(90, 202, 38);
+        background-color: var(--bs-primary);
         visibility: hidden;
         transition: 0.3s ease-in-out;
     }
