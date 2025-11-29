@@ -12,7 +12,8 @@
     font-size: 1.25rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
     box-shadow: none;
     outline: none;
 }
@@ -23,23 +24,13 @@
     position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--bs-secondary);
     font-weight: 600;
 }
 
-.offcanvas {
-    background-color: rgba(var(--bs-dark-rgb), 0.3);
-    backdrop-filter: blur(8px);
-  }
-  
-  .offcanvas-backdrop.show {
-    background-color: rgba(var(--bs-dark-rgb), 0.3); /* darker or lighter overlay */
-    opacity: 1;                           /* ensure your color’s alpha is used */
-  }
-  
-
-@media (min-width: 991px) {
+@media (min-width: 991.98px) {
     .nav-link::before {
         content: "";
         position: absolute;
@@ -57,5 +48,25 @@
     .nav-link.active::before {
         width: 100%;
         visibility: visible;
+    }
+
+    .offcanvas {
+        background-color: rgba(var(--bs-dark-rgb), 0.3);
+        backdrop-filter: blur(8px);
+    }
+
+    .offcanvas-backdrop.show {
+        background-color: rgba(var(--bs-dark-rgb), 0.3);
+        opacity: 1;
+    }
+
+    #offcanvasNavbar .navbar-nav {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #offcanvasNavbar .nav-link {
+        width: 100%;
     }
 }
