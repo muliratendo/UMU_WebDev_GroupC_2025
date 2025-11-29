@@ -1,3 +1,6 @@
+.body{
+    background-color: var(--bs-light);
+}
 .login-button {
     color: white;
     text-decoration: none;
