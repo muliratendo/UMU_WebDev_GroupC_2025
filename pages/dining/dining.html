@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="./css/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/local/index.css">
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/apple-touch-icon.png">
@@ -21,27 +21,26 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top h-auto">
         <div class="container-fluid">
-            <a class="navbar-brand me-auto" href="#">LOGO</a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            <a class="navbar-brand me-auto" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/"><img src="./assets/images/global/logo.png" alt="logo" height="80px"></a>
+            <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close me-4 mt-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+                    <ul class="navbar-nav flex-column text-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page"
-                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/index.html">Home</a>
+                            <a class="nav-link mx-lg-2" aria-current="page"
+                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2"
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/reservations.html">Reservations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2"
+                            <a class="nav-link mx-lg-2 active"
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining.html">Dining</a>
                         </li>
                         <li class="nav-item">
@@ -61,7 +60,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" class="login-button">Login</a>
+            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html" class="login-button btn-sm btn-outline-primary me-4">Login</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,85 +71,105 @@
 
     <!-- Main Section -->
     <main>
-        <section>
-
-        </section>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./carousel.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./carousel.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./carousel.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </main>
     <!-- End Main Section -->
 
     <!-- Footer -->
-    <footer class="bg-light text-white pt-5 pb-3">
+    <footer class="bg-dark pt-5 pb-3">
         <div class="container-fluid">
             <div class="row mb-4 justify-content-center align-items-center">
 
                 <!-- logo and Social media handles -->
                 <div class="col-lg-2 col-md-6 mx-auto">
-                    <h5 id="logo" class="mb-3 text-white">Sterling Pavilion Resort</h5>
-                    <p class="text-muted small">The Sterling Pavilion Resort is a luxury hotel located in Kampala,
+                    <h5 id="logo" class="mb-3 text-secondary">Sterling Pavilion Resort</h5>
+                    <p class="text-white small">The Sterling Pavilion Resort is a luxury hotel located in Kampala,
                         Uganda.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="https://www.linkedin.com/" class="text-Primary" aria-label="Follow us on LinkedIn"><i
-                                class="bi bi-linkedin fs-5"></i></a>
-                        <a href="https://x.com/" class="text-primary" aria-label="Follow us on Twitter"><i
-                                class="bi bi-twitter fs-5"></i></a>
-                        <a href="https://www.instagram.com/" class="text-Primary" aria-label="Follow us on Instagram"><i
-                                class="bi bi-instagram fs-5"></i></a>
+                    <div class="d-flex m-auto">
+                        <span class="m-auto">
+                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html" class="login-button d-flex align-items-center justify-content-center">
+                                <i class="material-icons-outlined pe-1">person</i>login</a>
+                        </span>
+                        <span class="m-auto">
+                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/register.html" class="login-button d-flex align-items-center justify-content-center">
+                                <i class="material-icons-outlined pe-1">person_add</i>Register</a>
+                        </span>
                     </div>
                 </div>
 
                 <!-- Reservations -->
                 <div class="col-lg-2 col-md-6 mx-auto">
-                    <h6 class="fw-bold text-white mb-3">Reservations</h6>
+                    <h6 class="fw-bold text-secondary mb-3">Reservations</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/reservations.html"
-                                class="text-muted text-decoration-none small">Accomodation</a>
+                                class="text-white text-decoration-none small">Accomodation</a>
                         </li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/reservations.html"
-                                class="text-muted text-decoration-none small">Event Spaces</a>
+                                class="text-white text-decoration-none small">Event Spaces</a>
                         </li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/reservations.html"
-                                class="text-muted text-decoration-none small">Confrence and Meeting Rooms</a>
+                                class="text-white text-decoration-none small">Confrence and Meeting Rooms</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Dining and Experiences -->
                 <div class="col-lg-2 col-md-6 mx-auto">
-                    <h6 class="fw-bold text-white mb-3">Dining and Experiences</h6>
+                    <h6 class="fw-bold text-secondary mb-3">Dining and Experiences</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/menu.html"
-                                class="text-muted text-decoration-none small">Menu</a></li>
+                                class="text-white text-decoration-none small">Menu</a></li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/menu.html#book-table"
-                                class="text-muted text-decoration-none small">Book a Table</a></li>
+                                class="text-white text-decoration-none small">Book a Table</a></li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/experiences.html"
-                                class="text-muted text-decoration-none small">Experiences</a></li>
+                                class="text-white text-decoration-none small">Experiences</a></li>
                     </ul>
                 </div>
 
                 <!-- Customer Support -->
                 <div class="col-lg-2 col-md-6 mx-auto">
-                    <h6 class="fw-bold text-white mb-3">Customer Support</h6>
+                    <h6 class="fw-bold text-secondary mb-3">Customer Support</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/get-in-touch.html"
-                                class="text-muted text-decoration-none small">Get in Touch</a>
+                                class="text-white text-decoration-none small">Get in Touch</a>
                         </li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/about-us.html"
-                                class="text-muted text-decoration-none small">Meet the Team</a></li>
+                                class="text-white text-decoration-none small">Meet the Team</a></li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/get-in-touch.html"
-                                class="text-muted text-decoration-none small">Help Center</a></li>
+                                class="text-white text-decoration-none small">Help Center</a></li>
                     </ul>
                 </div>
-
+                
                 <!-- Creator Details -->
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 mx-auto">
                     <h6 class="fw-bold text-white mb-3">Creator Details</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2">
@@ -167,15 +186,15 @@
                 </div>
             </div>
 
-            <hr class="text-muted">
+            <hr class="text-secondary">
 
             <!-- Copyright -->
             <div class="row pt-3">
                 <div class="col-12 text-center">
-                    <p class="text-muted small mb-1">
-                        &copy; <span id="currentYear"></span> Nkozi Tours. All rights reserved.
+                    <p class="text-secondary small mb-1">
+                        &copy; <span id="currentYear"></span> Sterling Pavilion Resort. All rights reserved.
                     </p>
-                    <p class="text-muted small fw-bold mt-2">
+                    <p class="text-white small fw-bold mt-2">
                         **Disclaimer:** This website and all its content (including company names, reviews, and
                         contact information) are for **educational and portfolio purposes only** and represent a
                         conceptual project. It
@@ -189,8 +208,8 @@
 
 
 
-    <script src="./js/global.js"></script>
-    <script src="./js/local/index.js"></script>
+    <script src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/js/global.js"></script>
+    <script src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/js/local/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
