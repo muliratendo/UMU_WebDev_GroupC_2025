@@ -17,7 +17,7 @@
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/favicon-16x16.png">
     <link rel="manifest"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/site.webmanifest">
-   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -78,25 +78,17 @@
     <main>
 
         <!-----------------------------------------------slides--------------------------------------------->
-         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/local/dining/in-room2.jpg"
-                        alt="">
-
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2> </h2>
-                        <p></p>
-                    </div>
-                </div>
+        <div class="card text-bg-dark">
+            <img src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/in-room.html" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">In-Room Services</h5>
             </div>
-            </div>
-            
+        </div>
 
         <!--end of slides-->
         <!--start of form-->
 
-     <!-- <div class="row g-3 justify-content-center align-items-center"> 
+        <!-- <div class="row g-3 justify-content-center align-items-center"> 
             
             <div class="container-lg">
              <div class="text-center">
@@ -136,20 +128,50 @@
                 </div>
             </div>
 
-                        --> 
-                      <div class="kuyu">
-
-                             <div class="love">
-                                <h1>kuyu loves women</h1>
-                             </div>
+                        -->
 
 
-                             <div>
-                                <img src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/local/dining/bar2.jpg" alt="">
-                             </div>
+        <!-------form final-->
+        <section id="contact-help" class="bg-light m-md-5 p-md-5 p-xl-8 rounded-3">
+            <div class="row g-3 justify-content-center align-items-center">
+                <div class="container-lg">
+                    <div class="text-center">
+                        <h2>BOOK A TABLE</h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 mx-auto flex gap-8">
+                            <div id="error"></div>
+                            <form id="form">
+                                <label for="name" class="form-label">Name</label><br>
+                                <input type="text" class="form-control" id="userName" placeholder="name"><br>
+                                <span id="name_error"></span>
 
-                      </div>
+                                <label for="email" class="form-label">Email address:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-chat-left-dots-fill"></i>
+                                    </span>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="e.g. example@gmail.com"><br>
+                                </div>
 
+                                <label for="date" class="date-lable">Date</label><br>
+                                <input type="date" class="form-control" id="date" placeholder="date"><br>
+
+                                <label for="time" class="form-label">Time</label><br>
+                                <input type="time" class="form-control" id="time" placeholder="Time"><br>
+
+                                <div class="mb-4 text-center">
+                                    <button type="submit" class="btn btn-secondary w-100" data-aos="zoom-out"
+                                        data-aos-duration="1500" data-aos-easing="ease-in-sine"
+                                        data-aos-anchor-placement="top-bottom">BOOK NOW</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- End Main Section -->
@@ -276,6 +298,9 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
