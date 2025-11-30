@@ -17,7 +17,7 @@
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/favicon-16x16.png">
     <link rel="manifest"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/site.webmanifest">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -78,24 +78,37 @@
     <main class="maino">
 
         <!-----------------------------------------------slides--------------------------------------------->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/local/dining/in-room1.jpg"
+                            alt="">
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2> </h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
         <!--end of slides-->
+         <section id="contact-help" class="bg-secondary"><div class="text-center text-white"><h1 >BOOK A TABLE</h1></div></section>
+      
         <!--start of form-->
- <section id="contact-help" class="bg-light m-md-5 p-md-5 p-xl-8 rounded-3">
-        <div class="row g-3 justify-content-center align-items-center"> 
+ 
+        <div class="row g-3 justify-content-center align-items-center p-lg-5"> 
             
             <div class="container-lg">
-             <div class="text-center">
-                    <h2>BOOK A TABLE</h2>
-                </div>         
+             
                 <div class="row justify-content-center">
                     <div class="col-lg-6 mx-auto flex gap-8">
                         <div id="error"></div>
-                        <form id="form">
-                            <label for="name" class="form-label">Name</label><br>
+                        <form id="form p-lg-5">
+                            <label for="name" class="form-label text-white">Name</label><br>
                             <input type="text" class="form-control" id="userName" placeholder="name"><br>
                             <span id="name_error"></span>
 
-                            <label for="email" class="form-label">Email address:</label>
+                            <label for="email" class="form-label text-white">Email address:</label>
                             <div class="mb-4 input-group">
                                 <span class="input-group-text">
                                     <i class="bi bi-chat-left-dots-fill"></i>
@@ -104,10 +117,10 @@
                                     placeholder="e.g. example@gmail.com"><br>
                             </div>
 
-                            <label for="date" class="date-lable">Date</label><br>
+                            <label for="date" class="date-lable text-white">Date</label><br>
                             <input type="date" class="form-control" id="date" placeholder="date"><br>
 
-                            <label for="time" class="form-label">Time</label><br>
+                            <label for="time" class="form-label text-white">Time</label><br>
                             <input type="time" class="form-control" id="time" placeholder="Time"><br>
 
                             <div class="mb-4 text-center">
@@ -120,7 +133,7 @@
                 </div>
             </div>
         </div>
- </section>
+
 
                         
 
@@ -251,10 +264,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>
