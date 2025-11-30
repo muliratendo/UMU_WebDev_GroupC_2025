@@ -4,16 +4,16 @@ const date = document.getElementById('date');
 const time = document.getElementById('time');
 const form = document.getElementById('form');
 const errorElement = document.getElementById('error')
-
+const name_error = document.getElementById('name_error');
 
 form.addEventListener('submit',(e)=>{
-    let messages = []
-if (userName.vaule === '' || userName.vaule == null){
-    messages.push('Name is required')
-}
- if (messages.lenght >0) {
-     e.preventDefault()
-     errorElement.innerText = messages.join(',')
+     
+if (userName.vaule === '' || userName.vaule == null)
+    {
+    
+     e.preventDefault();
+     name_error.innerHTML = "Name is required";
+    
  }
    
 })
