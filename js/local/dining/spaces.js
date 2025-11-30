@@ -1,4 +1,4 @@
-const userName = document.getElementById('name');
+/*const userName = document.getElementById('name');
 const email = document.getElementById('email');
 const date = document.getElementById('date');
 const time = document.getElementById('time');
@@ -16,4 +16,4 @@ if (userName.vaule === '' || userName.vaule == null){
      errorElement.innerText = messages.join(',')
  }
    
-})
+})*/
