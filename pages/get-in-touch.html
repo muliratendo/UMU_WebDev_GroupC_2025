@@ -17,6 +17,17 @@
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/favicon-16x16.png">
     <link rel="manifest"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/site.webmanifest">
+        <style>
+            .close{
+                display: flex;
+                flex-direction: row;
+            }
+            .two{
+                margin: 5px;
+                padding: 20px;
+                
+            }
+        </style>
 </head>
 
 <body>
@@ -41,7 +52,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2"
-                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining.html">Dining</a>
+                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html">Dining</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2"
@@ -71,7 +82,141 @@
 
     <!-- Main Section -->
     <main>
+        <!-- contact info -->
+    <section id="contact-info" class="bg-light m-md-5 p-md-5 p-xl-8 rounded-3">
+    <section id="help" class="bg-dark m-md-5 p-md-5 p-xl-8 rounded-3">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Get in touch</h2>
+                <p class="lead text-primary">Questions to ask? Fill out the form directly to contact us</p>
+
+    </section>
+            </div>
+            <div class="row jusfy-content-center">
+                <div class="col-lg-6 mx-auto bg-dark">
+                    <form>
+                        <label for="email" class="form-label text-primary">Email address:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-left-dots-fill"></i>
+
+                            </span>
+                            <input type="email" class="form-control text-primary" id="email"
+                                placeholder="e.g. example@gmail.com"><br>
+
+                        </div>
+                        <label for="Name" class="form-label text-primary">Name</label><br>
+                        <input type="text" class="form-control" id="Name" placeholder="Kim Chloe"><br>
+
+    <!-- help form -->
+    <section id="help">
+                        <label for="subject" class="form-label text-primary">what is your question about?</label>
+                        <select class="form-select" id="subject">
+                            <option value="pricing" selected>Pricing query</option>
+                            <option value="content">Content query</option>
+                            <option value="other">Other queries</option>
+
+                        </select>
+                        <div class="form-floating mb-4 mt-5">
+                            <textarea id="query" class="form-control" style="height: 140px;"></textarea>
+                            <label for="query" class="form-label">Type your query here...</label><br>
+                        </div>
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-secondary text-primary">submit</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
         
+    <section id="FAQ" class="bg-light m-md-5 p-md-5 p-xl-8 rounded-3">
+        <div class="container-md text-center">
+            <!-- FAQ header -->
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="container close">
+                <div class="two">
+                    <p>htytht</p>
+                </div>
+               
+                <div class="two, center">
+                    <p>htytht</p>
+                </div>
+                
+                <div class="two">
+                    <p>htytht</p>
+                </div>
+            </div>
+            <p class="lead text-muted">Everything you need to know about booking at Sterling Pavillion Restort in Uganda.</p>
+            <div class="row my-2 jusfy-content-around align-items-center">
+                <div class="col-8 mx-auto text-start">
+                    <!-- Start of FAQ -->
+                    <div class="accordion bg-dark" id="accordionExample">
+                        <!-- Chapter 1: Booking & Reservations -->
+                        <div class="accordion-item bg-light">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold bg-dark text-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I book reservations at Sterling Pavillion Restort? 
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    You can book directly through our <strong>Services</strong> page by selecting your desired services,
+                                    accommodation, or transport option and proceeding to the checkout. 
+                                    A confirmation email will be sent once payment is complete.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chapter 2: Safety & Support-->
+                        <div class="accordion-item bg-light">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold bg-dark text-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How do I get assistance if I have an issue on the services provided?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    For immediate assistance, you can call the emergency contact number provided in your booking confirmation.
+                                     For non-urgent inquiries, please use the "Get in touch" form on this page, 
+                                    and our support team will respond as quickly as possible.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chapter 3: Payment & Pricing -->
+                        <div class="accordion-item bg-light">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold bg-dark text-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                     We accept major credit/debit cards (Visa, MasterCard) and mobile money transfer options available in Uganda.
+                                     Full payment is generally required to secure your booking,
+                                     but check the specific restort policy for details.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     </main>
     <!-- End Main Section -->
 
@@ -120,10 +265,10 @@
                 <div class="col-lg-2 col-md-6 mx-auto">
                     <h6 class="fw-bold text-secondary mb-3">Dining and Experiences</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/menu.html"
+                        <li class="mb-2"><a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html"
                                 class="text-white text-decoration-none small">Menu</a></li>
                         <li class="mb-2"><a
-                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/menu.html#book-table"
+                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html"
                                 class="text-white text-decoration-none small">Book a Table</a></li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/experiences.html"
