@@ -72,7 +72,7 @@ h2 {
 
 .card-body {
     padding: 20px;
-    background: white;
+    background: var(--bs-dark);
 }
 
 .card-title {
@@ -110,7 +110,7 @@ h2 {
 .carousel h5,
 .carousel h5,
 .carousel-title {
-    color: #2E8B57 !important;
+    color: var(--bs-dark);
 }
 
 .timetable {
