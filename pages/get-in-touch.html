@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/global.css">
-    <link rel="stylesheet" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/css/local/get-in-touch.css">
+    <link rel="stylesheet" href="../css/local/get-in-touch.css">
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -17,17 +17,21 @@
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/favicon-16x16.png">
     <link rel="manifest"
         href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/favicon/site.webmanifest">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top h-auto">
         <div class="container-fluid">
-            <a class="navbar-brand me-auto" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/"><img src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/logo.png" alt="logo" height="80px"></a>
+            <a class="navbar-brand me-auto" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/"><img
+                    src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/logo.png" alt="logo"
+                    height="80px"></a>
             <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <button type="button" class="btn-close me-4 mt-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close me-4 mt-3" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav  justify-content-center flex-grow-1 pe-3">
@@ -60,7 +64,8 @@
                     </ul>
                 </div>
             </div>
-            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html" class="login-button btn-sm btn-outline-primary me-4">Login</a>
+            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html"
+                class="login-button btn-sm btn-outline-primary me-4">Login</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,6 +76,172 @@
 
     <!-- Main Section -->
     <main>
+        <!-- contact info -->
+        <section id="contact-info" class=" m-md-5 p-md-5 p-xl-8 rounded-3" data-aos="flip-left">
+            <section id="help" class="bg-dark m-md-5 p-md-5 p-xl-8 rounded-3">
+                <div class="container-lg">
+                    <div class="text-center" data-aos="fade-down">
+                        <h2>Get in touch</h2>
+                        <p class="lead text-primary"data-aos="zoom-out-up">Questions to ask? Fill out the form directly to contact us</p>
+
+            </section>
+            </div>
+            <div class="row jusfy-content-center" data-aos="flip-left">
+                <div class="col-lg-6 mx-auto bg-dark">
+                    <form>
+                        <label for="email" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">Email address:</label>
+                        <div class="mb-4 input-group" data-aos="fade-down">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-left-dots-fill"></i>
+
+                            </span>
+                            <input type="email" class="form-control text-primary"  id="email"
+                                placeholder="e.g. example@gmail.com"><br>
+
+                        </div>
+                        <label for="Name" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">Name</label><br>
+                        <input type="text" class="form-control" id="Name" placeholder="Kim Chloe"><br>
+
+                        <!-- help form -->
+                        <section id="help">
+                            <label for="subject" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">
+what is your question about?</label>
+                            <select class="form-select" id="subject">
+                                <option value="pricing" selected>Pricing query</option>
+                                <option value="content">Content query</option>
+                                <option value="other">Other queries</option>
+
+                            </select>
+                            <div class="form-floating mb-4 mt-5">
+                                <textarea id="query" class="form-control" style="height: 140px;"></textarea>
+                                <label for="query" class="form-label">Type your query here...</label><br>
+                            </div>
+                            <div class="mb-4 text-center">
+                                <button type="submit" class="btn btn-secondary text-primary" data-aos="flip-left">submit</button>
+
+                            </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" data-aos="zoom-out-right">
+
+            <section id="FAQ" class=" m-md-5 p-md-5 p-xl-8 rounded-3"  data-aos="fade-up" data-aos-duration="3000">
+>
+                <div class="container-md text-center">
+                    <!-- FAQ header -->
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                    <p class="lead text-muted" data-aos="flip-left">Everything you need to know about booking at Sterling Pavillion Restort
+                        in Uganda.</p>
+                    <div class="row my-2 jusfy-content-around align-items-center">
+                        <div class="col-8 mx-auto text-start">
+                            <!-- Start of FAQ -->
+                            <div class="accordion bg-dark" id="accordionExample">
+                                <!-- Chapter 1: Booking & Reservations -->
+                                <div class="accordion-item bg-light">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fw-bold bg-dark text-primary" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne" data-aos="flip-left">
+                                            How do I book reservations at Sterling Pavillion Restort?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            You can book directly through our <strong>Services</strong> page by
+                                            selecting your desired services,
+                                            accommodation, or transport option and proceeding to the checkout.
+                                            A confirmation email will be sent once payment is complete.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Chapter 2: Safety & Support-->
+                                <div class="accordion-item bg-light">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold bg-dark text-primary"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo" data-aos="flip-left">
+                                            How do I get assistance if I have an issue on the services provided?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            For immediate assistance, you can call the emergency contact number provided
+                                            in your booking confirmation.
+                                            For non-urgent inquiries, please use the "Get in touch" form on this page,
+                                            and our support team will respond as quickly as possible.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Chapter 3: Payment & Pricing -->
+                                <div class="accordion-item bg-light">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold bg-dark text-primary"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree" data-aos="flip-left">
+                                            What payment methods do you accept?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            We accept major credit/debit cards (Visa, MasterCard) and mobile money
+                                            transfer options available in Uganda.
+                                            Full payment is generally required to secure your booking,
+                                            but check the specific restort policy for details.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="info">
+                <div class="container-fluid " border-width:5px data-aos="fade-up" data-aos-duration="3000 height:100px:" >
+                    <div class="row g-auto justify-content-center align-items-center border-radius:50px rounded-3">
+                        <div class="col-3 m-4 ">
+                            <div class="card" style="border-radius: 50px; border-color:light;">
+                                <img src="../assets/images/local/get-in-touch/email.jpg" class="card-img-top"  width="5%" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text text-dark">EMAIL<br> visit all our websites using our
+                                        email<br>use our g-mail<br>sterlingpavillion@gmail.com.ug</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mx-1 ">
+                            <div class="card" style="border-radius: 50px; border-color:light;">
+                                <img src="../assets/images/local/get-in-touch/call.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text text-dark">CALLS<br>For more information<br> contact us
+                                        on<br>+256791111343 or +256708806563" </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mx-1">
+                            <div class="card" style="border-radius: 50px; border-color:light;">
+                                <img src="../assets/images/local/get-in-touch/location.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <p class="card-text text-dark"> ADDRESS<br>We are located at<br>kampala jinja
+                                        road<br>P.O BOX 4422<br>Mukono</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
     </main>
     <!-- End Main Section -->
 
@@ -86,11 +257,13 @@
                         Uganda.</p>
                     <div class="d-flex m-auto">
                         <span class="m-auto">
-                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html" class="login-button d-flex align-items-center justify-content-center">
+                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html"
+                                class="login-button d-flex align-items-center justify-content-center">
                                 <i class="material-icons-outlined pe-1">person</i>login</a>
                         </span>
                         <span class="m-auto">
-                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/register.html" class="login-button d-flex align-items-center justify-content-center">
+                            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/register.html"
+                                class="login-button d-flex align-items-center justify-content-center">
                                 <i class="material-icons-outlined pe-1">person_add</i>Register</a>
                         </span>
                     </div>
@@ -146,7 +319,7 @@
                                 class="text-white text-decoration-none small">Help Center</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Creator Details -->
                 <div class="col-lg-2 col-md-6 mx-auto">
                     <h6 class="fw-bold text-white mb-3">Creator Details</h6>
@@ -192,6 +365,10 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
