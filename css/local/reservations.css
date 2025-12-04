@@ -1,5 +1,6 @@
 body{
     height: auto;
+    background-color: var(--bs-light);
 }
 
 .glass{
@@ -27,6 +28,7 @@ body{
     height: 250px;
     font-weight: bold;
     font-size: 24px;
+    
 }
 
 .lead{
@@ -262,4 +264,9 @@ body{
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.level{
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(26, 25, 25, 0.19);
 }
