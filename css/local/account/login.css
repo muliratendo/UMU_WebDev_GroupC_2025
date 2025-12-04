@@ -1,0 +1,17 @@
+[v-cloak] {
+  display: none;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.login-button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.login-button:hover {
+  color: var(--bs-primary);
+}

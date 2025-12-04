@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "serve": "npx serve"
+  },
   "dependencies": {
     "bootstrap": "^5.3.8"
   }
