@@ -95,23 +95,22 @@
                         <div id="error"></div>
                         <form id="form" class="p-lg-5" novalidate>
                             <label for="name" class="form-label text-white">Name</label><br>
-                            <input type="text" class="form-control" id="name" placeholder="name"><br>
-                            <span id="name_error"></span>
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="name"><br>
+                            <div class="text-danger" id="name_error" ></div>
 
-                            <label for="email" class="form-label text-white">Email address:</label>
-                            <div class="mb-4 input-group">
-                                <span class="input-group-text">
-                                    <i class="bi bi-chat-left-dots-fill"></i>
-                                </span>
-                                <input type="email" class="form-control" id="email"
+                            <label for="email" class="form-label text-white">Email address:</label>                          
+                                <input type="email" class="form-control form-control-lg" id="email"
                                     placeholder="e.g. example@gmail.com"><br>
-                            </div>
+                                    <div class="text-danger" id="email_error" ></div>
+                            
 
                             <label for="date" class="date-lable text-white">Date</label><br>
-                            <input type="date" class="form-control" id="date" placeholder="date"><br>
+                            <input type="date" class="form-control form-control-lg" id="date" placeholder="date"><br>
+                            <div class="text-danger" id="date_error" ></div>
 
                             <label for="time" class="form-label text-white">Time</label><br>
-                            <input type="time" class="form-control" id="time" placeholder="Time"><br>
+                            <input type="time" class="form-control form-control-lg" id="time" placeholder="Time"><br>
+                            <div class="text-danger" id="time_error" ></div>
 
                             <div class="mb-4 text-center">
                                 <button type="submit" class="btn btn-secondary w-100" data-aos="zoom-out"
@@ -123,8 +122,6 @@
                 </div>
             </div>
         </div>
-
-
 
                         
 
