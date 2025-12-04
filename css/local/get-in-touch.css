@@ -1,0 +1,23 @@
+/* file: styles.css */
+.blog-post-card {
+  background-color: rgb(253, 204, 204);       
+  border-radius: 10px;           
+  width: 250px;                  
+  text-align: center;   
+  margin: 10px;      
+}
+.post-content {
+  padding: 20px;       
+}        
+
+.read-more:hover {
+  background-color: darkblue; 
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+img{
+height: 1%;
+width: 1%;
+}
