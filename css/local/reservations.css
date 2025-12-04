@@ -75,4 +75,18 @@ body{
     pointer-events: auto;
 }
 
+.bin:hover{
+    transform: ;
+}
+
 .overlay-text p{margin:0}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    border:2px;
+    border-color: black;
+    justify-content: center;
+    width: 40%;
+}
