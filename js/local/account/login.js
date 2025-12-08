@@ -17,6 +17,12 @@ createApp({
       this.loading = true;
       this.error = null;
 
+      if (!this.email || !this.password) {
+        this.error = "Please fill in all fields.";
+        this.loading = false;
+        return;
+      }
+
       try {
         await signInWithEmailAndPassword(auth, this.email, this.password);
         // Firebase automatically handles session persistence

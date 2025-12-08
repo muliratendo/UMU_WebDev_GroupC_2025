@@ -22,6 +22,23 @@ createApp({
       this.loading = true;
       this.error = null;
 
+      if (
+        !this.name ||
+        !this.email ||
+        !this.password ||
+        !this.password_confirmation
+      ) {
+        this.error = "Please fill in all fields.";
+        this.loading = false;
+        return;
+      }
+
+      if (this.password.length < 6) {
+        this.error = "Password must be at least 6 characters long.";
+        this.loading = false;
+        return;
+      }
+
       if (this.password !== this.password_confirmation) {
         this.error = "Passwords do not match.";
         this.loading = false;
