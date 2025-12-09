@@ -69,46 +69,57 @@
 
     <!-- Main Section -->
     <main>
-        <div id="register-app" class="container mt-5 mb-5" v-cloak>
+        <div id="register-app" class="container mt-5 mb-5 pt-5" v-cloak>
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
+                <div class="col-md-12 col-lg-10">
                     <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="text-center mb-4">Register</h3>
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body p-4">
+                                    <h3 class="text-center mb-4">Register</h3>
 
-                            <div v-if="error" class="alert alert-danger" role="alert">
-                                {{ error }}
+                                    <div v-if="error" class="alert alert-danger" role="alert">
+                                        {{ error }}
+                                    </div>
+
+                                    <form @submit.prevent="register">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="name" v-model="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="email" v-model="email"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" v-model="password"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password_confirmation" class="form-label">Confirm
+                                                Password</label>
+                                            <input type="password" class="form-control" id="password_confirmation"
+                                                v-model="password_confirmation" required>
+                                        </div>
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-primary" :disabled="loading">
+                                                <span v-if="loading" class="spinner-border spinner-border-sm me-2"
+                                                    role="status" aria-hidden="true"></span>
+                                                {{ loading ? 'Registering...' : 'Register' }}
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="text-center mt-3">
+                                        <p class="small">Already have an account? <a href="login.html">Login here</a>
+                                        </p>
+                                    </div> 
+                                </div>
                             </div>
-
-                            <form @submit.prevent="register">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="name" v-model="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="email" v-model="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" v-model="password"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" id="password_confirmation"
-                                        v-model="password_confirmation" required>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary" :disabled="loading">
-                                        <span v-if="loading" class="spinner-border spinner-border-sm me-2" role="status"
-                                            aria-hidden="true"></span>
-                                        {{ loading ? 'Registering...' : 'Register' }}
-                                    </button>
-                                </div>
-                            </form>
-                            <div class="text-center mt-3">
-                                <p class="small">Already have an account? <a href="login.html">Login here</a></p>
+                            <div
+                                class="col-md-5 d-none d-md-flex bg-primary text-white align-items-center justify-content-center rounded-end">
+                                <img src="../../assets/images/local/account/signup/signup.webp" class="w-100">
                             </div>
                         </div>
                     </div>
