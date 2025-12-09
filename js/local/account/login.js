@@ -1,5 +1,12 @@
-import { auth } from "./firebase-config.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  auth,
+  db,
+  doc,
+  setDoc,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  googleProvider,
+} from "./firebase-config.js";
 
 const { createApp } = Vue;
 
@@ -24,8 +31,22 @@ createApp({
       }
 
       try {
-        await signInWithEmailAndPassword(auth, this.email, this.password);
-        // Firebase automatically handles session persistence
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          this.email,
+          this.password
+        );
+        const user = userCredential.user;
+
+        // Update last_login in Firestore
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            last_login: new Date().toISOString(),
+          },
+          { merge: true }
+        );
+
         window.location.href = "dashboard.html";
       } catch (err) {
         console.error(err);
@@ -43,6 +64,26 @@ createApp({
         }
       } finally {
         this.loading = false;
+      }
+    },
+    async loginWithGoogle() {
+      try {
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
+
+        // Update last_login in Firestore
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            last_login: new Date().toISOString(),
+          },
+          { merge: true }
+        );
+
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        console.error(err);
+        this.error = "Google Sign-In failed: " + err.message;
       }
     },
   },

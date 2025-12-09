@@ -1,8 +1,13 @@
-import { auth } from "./firebase-config.js";
 import {
+  auth,
+  db,
+  doc,
+  setDoc,
   createUserWithEmailAndPassword,
   updateProfile,
-} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+  signInWithPopup,
+  googleProvider,
+} from "./firebase-config.js";
 
 const { createApp } = Vue;
 
@@ -11,6 +16,7 @@ createApp({
     return {
       name: "",
       email: "",
+      phone: "",
       password: "",
       password_confirmation: "",
       loading: false,
@@ -25,6 +31,7 @@ createApp({
       if (
         !this.name ||
         !this.email ||
+        !this.phone ||
         !this.password ||
         !this.password_confirmation
       ) {
@@ -58,6 +65,15 @@ createApp({
           displayName: this.name,
         });
 
+        // Save user data to Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          created_at: new Date().toISOString(),
+          last_login: new Date().toISOString(),
+        });
+
         // Redirect to dashboard
         window.location.href = "dashboard.html";
       } catch (err) {
@@ -71,6 +87,30 @@ createApp({
         }
       } finally {
         this.loading = false;
+      }
+    },
+    async registerWithGoogle() {
+      try {
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
+
+        // Save user data to Firestore (merge: true to avoid overwriting existing data if they login again)
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            name: user.displayName,
+            email: user.email,
+            last_login: new Date().toISOString(),
+            // Only set created_at if it's new (handled by check or just set it, but standardized approach is merge)
+            // For simplicity, we'll just update fields that we know
+          },
+          { merge: true }
+        );
+
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        console.error(err);
+        this.error = "Google Sign-In failed: " + err.message;
       }
     },
   },

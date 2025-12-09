@@ -22,7 +22,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top h-auto">
+    <nav class="navbar navbar-expand-lg fixed-top h-auto navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/"><img
                     src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/logo.png" alt="logo"
@@ -64,8 +64,13 @@
                     </ul>
                 </div>
             </div>
-            <a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html"
-                class="login-button btn-sm btn-outline-primary me-4">Login</a>
+            <div id="nav-auth-section" v-cloak>
+                <a v-if="!user" :href="loginLink" class="login-button btn-sm btn-outline-primary me-4">Login</a>
+                <a v-else :href="dashboardLink"
+                    class="d-flex align-items-center text-decoration-none me-4 text-primary">
+                    <span class="material-icons-outlined" style="font-size: 32px;">account_circle</span>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,30 +87,34 @@
                 <div class="container-lg">
                     <div class="text-center" data-aos="fade-down">
                         <h2>Get in touch</h2>
-                        <p class="lead text-primary"data-aos="zoom-out-up">Questions to ask? Fill out the form directly to contact us</p>
+                        <p class="lead text-primary" data-aos="zoom-out-up">Questions to ask? Fill out the form directly
+                            to contact us</p>
 
             </section>
             </div>
             <div class="row jusfy-content-center" data-aos="flip-left">
                 <div class="col-lg-6 mx-auto bg-dark">
                     <form>
-                        <label for="email" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">Email address:</label>
+                        <label for="email" class="form-label text-primary" data-aos="fade-up"
+                            data-aos-duration="3000">Email address:</label>
                         <div class="mb-4 input-group" data-aos="fade-down">
                             <span class="input-group-text">
                                 <i class="bi bi-chat-left-dots-fill"></i>
 
                             </span>
-                            <input type="email" class="form-control text-primary"  id="email"
+                            <input type="email" class="form-control text-primary" id="email"
                                 placeholder="e.g. example@gmail.com"><br>
 
                         </div>
-                        <label for="Name" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">Name</label><br>
+                        <label for="Name" class="form-label text-primary" data-aos="fade-up"
+                            data-aos-duration="3000">Name</label><br>
                         <input type="text" class="form-control" id="Name" placeholder="Kim Chloe"><br>
 
                         <!-- help form -->
                         <section id="help">
-                            <label for="subject" class="form-label text-primary" data-aos="fade-up" data-aos-duration="3000">
-what is your question about?</label>
+                            <label for="subject" class="form-label text-primary" data-aos="fade-up"
+                                data-aos-duration="3000">
+                                what is your question about?</label>
                             <select class="form-select" id="subject">
                                 <option value="pricing" selected>Pricing query</option>
                                 <option value="content">Content query</option>
@@ -117,7 +126,8 @@ what is your question about?</label>
                                 <label for="query" class="form-label">Type your query here...</label><br>
                             </div>
                             <div class="mb-4 text-center">
-                                <button type="submit" class="btn btn-secondary text-primary" data-aos="flip-left">submit</button>
+                                <button type="submit" class="btn btn-secondary text-primary"
+                                    data-aos="flip-left">submit</button>
 
                             </div>
                     </form>
@@ -129,12 +139,13 @@ what is your question about?</label>
         <!-- FAQ -->
         <section id="faq" data-aos="zoom-out-right">
 
-            <section id="FAQ" class=" m-md-5 p-md-5 p-xl-8 rounded-3"  data-aos="fade-up" data-aos-duration="3000">
->
+            <section id="FAQ" class=" m-md-5 p-md-5 p-xl-8 rounded-3" data-aos="fade-up" data-aos-duration="3000">
+                >
                 <div class="container-md text-center">
                     <!-- FAQ header -->
                     <h2>Frequently Asked Questions (FAQ)</h2>
-                    <p class="lead text-muted" data-aos="flip-left">Everything you need to know about booking at Sterling Pavillion Restort
+                    <p class="lead text-muted" data-aos="flip-left">Everything you need to know about booking at
+                        Sterling Pavillion Restort
                         in Uganda.</p>
                     <div class="row my-2 jusfy-content-around align-items-center">
                         <div class="col-8 mx-auto text-start">
@@ -208,11 +219,13 @@ what is your question about?</label>
             </section>
 
             <section id="info">
-                <div class="container-fluid " border-width:5px data-aos="fade-up" data-aos-duration="3000 height:100px:" >
+                <div class="container-fluid " border-width:5px data-aos="fade-up"
+                    data-aos-duration="3000 height:100px:">
                     <div class="row g-auto justify-content-center align-items-center border-radius:50px rounded-3">
                         <div class="col-3 m-4 ">
                             <div class="card" style="border-radius: 50px; border-color:light;">
-                                <img src="../assets/images/local/get-in-touch/email.jpg" class="card-img-top"  width="5%" alt="...">
+                                <img src="../assets/images/local/get-in-touch/email.jpg" class="card-img-top" width="5%"
+                                    alt="...">
                                 <div class="card-body">
                                     <p class="card-text text-dark">EMAIL<br> visit all our websites using our
                                         email<br>use our g-mail<br>sterlingpavillion@gmail.com.ug</p>
@@ -292,7 +305,8 @@ what is your question about?</label>
                 <div class="col-lg-2 col-md-6 mx-auto">
                     <h6 class="fw-bold text-secondary mb-3">Dining and Experiences</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html"
+                        <li class="mb-2"><a
+                                href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html"
                                 class="text-white text-decoration-none small">Menu</a></li>
                         <li class="mb-2"><a
                                 href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/dining/dining.html"
@@ -359,7 +373,7 @@ what is your question about?</label>
 
 
 
-    <script src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/js/global.js"></script>
+    <script src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/js/global.js" type="module"></script>
     <script src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/js/local/get-in-touch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

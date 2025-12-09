@@ -21,7 +21,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top h-auto">
+    <nav class="navbar navbar-expand-lg fixed-top h-auto navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/"><img
                     src="https://muliratendo.github.io/UMU_WebDev_GroupC_2025/assets/images/global/logo.png" alt="logo"
@@ -58,7 +58,13 @@
                     </ul>
                 </div>
             </div>
-            <a href="login.html" class="login-button btn-sm btn-outline-primary me-4">Login</a>
+            <div id="nav-auth-section" v-cloak>
+                <a v-if="!user" :href="loginLink" class="login-button btn-sm btn-outline-primary me-4">Login</a>
+                <a v-else :href="dashboardLink"
+                    class="d-flex align-items-center text-decoration-none me-4 text-primary">
+                    <span class="material-icons-outlined" style="font-size: 32px;">account_circle</span>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -93,6 +99,10 @@
                                                 required>
                                         </div>
                                         <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" v-model="phone" required>
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="password" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="password" v-model="password"
                                                 required>
@@ -111,10 +121,26 @@
                                             </button>
                                         </div>
                                     </form>
+
+                                    <div class="d-flex align-items-center my-3">
+                                        <hr class="flex-grow-1">
+                                        <span class="mx-2 text-muted">OR</span>
+                                        <hr class="flex-grow-1">
+                                    </div>
+
+                                    <div class="d-grid gap-2 mb-3">
+                                        <button type="button"
+                                            class="btn btn-outline-dark d-flex align-items-center justify-content-center"
+                                            @click="registerWithGoogle">
+                                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                                alt="Google" style="width: 20px; margin-right: 8px;">
+                                            Continue with Google
+                                        </button>
+                                    </div>
                                     <div class="text-center mt-3">
                                         <p class="small">Already have an account? <a href="login.html">Login here</a>
                                         </p>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                             <div
@@ -234,7 +260,7 @@
     <!-- End Footer -->
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="../../js/global.js"></script>
+    <script type="module" src="../../js/global.js"></script>
     <script type="module" src="../../js/local/account/register.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
