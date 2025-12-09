@@ -1,5 +1,9 @@
-import { auth } from "./firebase-config.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  auth,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  googleProvider,
+} from "./firebase-config.js";
 
 const { createApp } = Vue;
 
@@ -43,6 +47,15 @@ createApp({
         }
       } finally {
         this.loading = false;
+      }
+    },
+    async loginWithGoogle() {
+      try {
+        await signInWithPopup(auth, googleProvider);
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        console.error(err);
+        this.error = "Google Sign-In failed: " + err.message;
       }
     },
   },

@@ -1,8 +1,4 @@
-import { auth } from "./firebase-config.js";
-import {
-  onAuthStateChanged,
-  signOut,
-} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { auth, onAuthStateChanged, signOut } from "./firebase-config.js";
 
 const { createApp } = Vue;
 
