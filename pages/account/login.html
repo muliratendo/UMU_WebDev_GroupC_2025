@@ -69,37 +69,47 @@
 
     <!-- Main Section -->
     <main>
-        <div id="login-app" class="container mt-5 mb-5" v-cloak>
+        <div id="login-app" class="container mt-5 mb-5 pt-5" v-cloak>
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-10 col-lg-8">
                     <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="text-center mb-4">Login</h3>
-
-                            <div v-if="error" class="alert alert-danger" role="alert">
-                                {{ error }}
+                        <div class="row g-0">
+                            <div
+                                class="col-md-5 d-none d-md-flex bg-primary text-white align-items-center justify-content-center rounded-start">
+                                <img src="../../assets/images/local/account/login/login.svg" class="w-100">
                             </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4">
+                                    <h3 class="text-center mb-4">Login</h3>
 
-                            <form @submit.prevent="login">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="email" v-model="email" required>
+                                    <div v-if="error" class="alert alert-danger" role="alert">
+                                        {{ error }}
+                                    </div>
+
+                                    <form @submit.prevent="login">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="email" v-model="email"
+                                                required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" v-model="password"
+                                                required>
+                                        </div>
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-primary" :disabled="loading">
+                                                <span v-if="loading" class="spinner-border spinner-border-sm me-2"
+                                                    role="status" aria-hidden="true"></span>
+                                                {{ loading ? 'Logging in...' : 'Login' }}
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="text-center mt-3">
+                                        <p class="small">Don't have an account? <a href="register.html">Register
+                                                here</a></p>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" v-model="password"
-                                        required>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary" :disabled="loading">
-                                        <span v-if="loading" class="spinner-border spinner-border-sm me-2" role="status"
-                                            aria-hidden="true"></span>
-                                        {{ loading ? 'Logging in...' : 'Login' }}
-                                    </button>
-                                </div>
-                            </form>
-                            <div class="text-center mt-3">
-                                <p class="small">Don't have an account? <a href="register.html">Register here</a></p>
                             </div>
                         </div>
                     </div>

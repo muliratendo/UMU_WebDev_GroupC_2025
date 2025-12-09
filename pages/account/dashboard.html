@@ -73,7 +73,7 @@
 
     <!-- Main Section -->
     <main>
-        <div id="dashboard-app" class="container mt-5 mb-5" v-cloak>
+        <div id="dashboard-app" class="container mt-5 mb-5 pt-5" v-cloak>
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="card shadow-sm">
@@ -101,8 +101,9 @@
                                 <div class="row">
                                     <div class="col-md-4 text-center mb-3">
                                         <div class="avatar-placeholder bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto"
-                                            style="width: 100px; height: 100px; font-size: 2.5rem;">
-                                            {{ user.name ? user.name.charAt(0).toUpperCase() : 'U' }}
+                                            style="width: 100px; height: 100px;">
+                                            <i class="material-icons-outlined"
+                                                style="font-size: 4rem;">account_circle</i>
                                         </div>
                                         <h5 class="mt-3">{{ user.name }}</h5>
                                         <p class="text-muted">{{ user.email }}</p>
