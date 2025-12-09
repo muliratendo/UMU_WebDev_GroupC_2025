@@ -1,5 +1,8 @@
 import {
   auth,
+  db,
+  doc,
+  setDoc,
   signInWithEmailAndPassword,
   signInWithPopup,
   googleProvider,
@@ -28,8 +31,22 @@ createApp({
       }
 
       try {
-        await signInWithEmailAndPassword(auth, this.email, this.password);
-        // Firebase automatically handles session persistence
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          this.email,
+          this.password
+        );
+        const user = userCredential.user;
+
+        // Update last_login in Firestore
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            last_login: new Date().toISOString(),
+          },
+          { merge: true }
+        );
+
         window.location.href = "dashboard.html";
       } catch (err) {
         console.error(err);
@@ -51,7 +68,18 @@ createApp({
     },
     async loginWithGoogle() {
       try {
-        await signInWithPopup(auth, googleProvider);
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
+
+        // Update last_login in Firestore
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            last_login: new Date().toISOString(),
+          },
+          { merge: true }
+        );
+
         window.location.href = "dashboard.html";
       } catch (err) {
         console.error(err);

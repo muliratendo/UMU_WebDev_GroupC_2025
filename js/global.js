@@ -1,52 +1,40 @@
-// import {account} from '../appwrite'
+import { auth, onAuthStateChanged } from "./local/account/firebase-config.js";
 
-const { Client, Account } = Appwrite;
+const { createApp } = Vue;
 
-const client = new Client()
-  .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject("stelingpavillion");
+const globalAuthApp = createApp({
+  data() {
+    return {
+      user: null,
+      loading: true,
+      dashboardLink:
+        "https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/dashboard.html",
+      loginLink:
+        "https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/login.html",
+    };
+  },
+  mounted() {
+    // Check if we are on the dashboard page to highlight active state or prevent redirect loops if needed
+    // But here we just handle the navbar button
 
-const account = new Account(client);
+    // Determine correct relative paths based on current location if strictly needed,
+    // but using absolute/hosted paths as per existing patterns is safer for this user's setup.
+    // However, to support local dev, we might want to be smarter.
+    // For now, I'll stick to the logic requested: Login -> Account Icon.
 
-const loginBtn = document.getElementById("login-btn");
-const logoutBtn = document.getElementById("logout-btn");
-const profileScreen = document.getElementById("profile-screen");
-const loginScreen = document.getElementById("login-screen");
+    onAuthStateChanged(auth, (user) => {
+      this.user = user;
+      this.loading = false;
+    });
+  },
+  methods: {
+    handleLoginClick() {
+      window.location.href = this.loginLink;
+    },
+  },
+});
 
-async function handleLogin() {
-  account.createOAuth2Session(
-    "google",
-    "https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/dashboard.html",
-    "https://muliratendo.github.io/UMU_WebDev_GroupC_2025/pages/account/fail.html"
-  );
+// Only mount if the element exists
+if (document.getElementById("nav-auth-section")) {
+  globalAuthApp.mount("#nav-auth-section");
 }
-
-async function getUser() {
-  try {
-    const user = await account.get();
-    renderProfileScreen(user);
-  } catch (error) {
-    renderLoginScreen();
-  }
-}
-
-function renderLoginScreen() {
-  loginScreen.classList.remove("visually-hidden");
-}
-
-async function renderProfileScreen(user) {
-  document.getElementById("username").textContent = user.name;
-
-  profileScreen.classList.remove("visually-hidden");
-}
-
-async function handleLogout() {
-  account.deleteSession("current");
-  profileScreen.classList.add("visually-hidden");
-  renderLoginScreen();
-}
-
-loginBtn?.addEventListener("click", handleLogin);
-logoutBtn?.addEventListener("click", handleLogout);
-
-getUser();
